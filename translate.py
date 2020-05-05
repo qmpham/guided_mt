@@ -8,7 +8,7 @@ if __name__ == "__main__":
     argparser.add_argument('-s', '--src', required=True, help="Source file path")
     argparser.add_argument('-t', '--tgt', required=True, help="Target file path")
     argparser.add_argument('-m', '--model', required=True, help="Model path")
-    argparser.add_argument('-j', '--joiner', default='※', help="Sentence joiner")
+    argparser.add_argument('-j', '--joiner', default='‖', help="Sentence joiner")
     argparser.add_argument('-d', '--dev', default='cpu', choices=["cpu", "cuda", "auto"], help="Device to translate")
     argparser.add_argument('--hyp', required=True, help="Output translation file name")
     args = argparser.parse_args()
@@ -17,7 +17,7 @@ if __name__ == "__main__":
     prefix = []
     for i in range(len(tgt_all)):
         if args.joiner in tgt_all[i]:
-            pre = tgt_all[i].split(args.joiner)[0] + args.joiner
+            pre = " ".join([tgt_all[i], args.joiner])
             prefix.append(pre.split())
         else:
             prefix.append(None)
