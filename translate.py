@@ -25,7 +25,8 @@ if __name__ == "__main__":
 
     translator = ctranslate2.Translator(
             model_path=args.model,
-            device=args.dev)
+            device=args.dev,
+            device_index=0)
 
     output = translator.translate_batch(
             source=src,
