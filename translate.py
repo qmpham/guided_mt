@@ -17,11 +17,11 @@ if __name__ == "__main__":
     with open(args.config,"r") as stream:
         config = yaml.load(stream)
 
-    for src, tgt in zip(config["src"], config["tgt"]):
-        print("translate %s with prefix %s"%(src,tgt))
-        with open(src,"r") as f:
+    for src_file, tgt_file in zip(config["src"], config["tgt"]):
+        print("translate %s with prefix %s"%(src_file,tgt_file))
+        with open(src_file,"r") as f:
             src = [l.strip().split() for l in f.readlines()]
-        with open(tgt,"r") as f:
+        with open(tgt_file,"r") as f:
             tgt_all = [l.strip() for l in f.readlines()]
         prefix = []
         for i in range(len(tgt_all)):
@@ -47,8 +47,9 @@ if __name__ == "__main__":
                 return_scores=False)
         import os
         save_path = os.path.dirname(args.model) 
-        src_name = os.path.basename(src)
+        src_name = os.path.basename(src_file)
         hyp_file = os.path.join(save_path,"eval","%s.trans"%src_name)
+        print("output: %s"%hyp_file)
         with open(hyp_file, "w") as f:
             for batch in output:
                 for line in batch:
