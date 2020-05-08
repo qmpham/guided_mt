@@ -45,8 +45,11 @@ if __name__ == "__main__":
                 length_penalty=0.2,
                 min_decoding_length=0,
                 return_scores=False)
-
-        with open(args.hyp, "w") as f:
+        import os
+        save_path = os.path.dirname(args.model) 
+        src_name = os.path.basename(src)
+        hyp_file = os.path.join(save_path,"eval","%s.trans"%src_name)
+        with open(hyp_file, "w") as f:
             for batch in output:
                 for line in batch:
                     hyp = " ".join(line["tokens"])
