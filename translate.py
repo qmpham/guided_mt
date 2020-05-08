@@ -12,7 +12,7 @@ if __name__ == "__main__":
     argparser.add_argument('-m', '--model', required=True, help="Model path")
     argparser.add_argument('-j', '--joiner', default='‖', help="Sentence joiner")
     argparser.add_argument('-d', '--dev', default='cpu', choices=["cpu", "cuda", "auto"], help="Device to translate")
-    argparser.add_argument('--hyp', required=True, help="Output translation file name")
+    argparser.add_argument('--hyp', required=False, help="Output translation file name")
     args = argparser.parse_args()
     with open(args.config,"r") as stream:
         config = yaml.load(stream)
