@@ -26,12 +26,12 @@ if __name__ == "__main__":
         prefix = []
         for i in range(len(tgt_all)):
             if args.joiner in tgt_all[i]:
-                pre = " ".join([tgt_all[i], args.joiner])
+                pre = tgt_all[i].split(args.joiner)[0] + args.joiner
                 prefix.append(pre.split())
             else:
                 prefix.append(None)
 
-
+        print(prefix)
         translator = ctranslate2.Translator(
                 model_path=args.model,
                 device=args.dev,
@@ -56,3 +56,4 @@ if __name__ == "__main__":
                     hyp = " ".join(line["tokens"])
                     # f.write(" ".join(line["tokens"]) + "\n")
                     f.write(hyp.split(" %s " % args.joiner)[-1] + "\n")
+                    #f.write(hyp + "\n")
