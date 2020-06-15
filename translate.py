@@ -32,6 +32,8 @@ if __name__ == "__main__":
                 prefix.append(None)
 
         print(prefix)
+        import time
+        start = time.time()
         translator = ctranslate2.Translator(
                 model_path=args.model,
                 device=args.dev,
@@ -45,6 +47,8 @@ if __name__ == "__main__":
                 length_penalty=0.2,
                 min_decoding_length=0,
                 return_scores=False)
+        end = time.time()
+        duration = end - start
         import os
         save_path = os.path.dirname(args.model) 
         src_name = os.path.basename(src_file)
@@ -57,3 +61,4 @@ if __name__ == "__main__":
                     # f.write(" ".join(line["tokens"]) + "\n")
                     f.write(hyp.split(" %s " % args.joiner)[-1] + "\n")
                     #f.write(hyp + "\n")
+        print("translation finished after %f s"%duration)
