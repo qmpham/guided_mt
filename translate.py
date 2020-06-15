@@ -26,8 +26,8 @@ if __name__ == "__main__":
         prefix = []
         for i in range(len(tgt_all)):
             if args.joiner in tgt_all[i]:
-                pre = tgt_all[i].split(args.joiner)[0] + args.joiner
-                prefix.append(pre.split())
+                pre = tgt_all[i].split(args.joiner)[0]
+                prefix.append(pre.split()+[args.joiner])
             else:
                 prefix.append(None)
 
