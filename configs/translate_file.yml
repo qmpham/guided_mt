@@ -1,0 +1,20 @@
+src:
+        - /gpfsdswork/projects/rech/sfz/utt84zy/neural_similarity_augmentation/tst/clean.ECB.en-fr.en.tst.tokc.bpe.s2v.augmented
+        - /gpfsdswork/projects/rech/sfz/utt84zy/neural_similarity_augmentation/tst/clean.EMEA.en-fr.en.tst.tokc.bpe.s2v.augmented
+        - /gpfsdswork/projects/rech/sfz/utt84zy/neural_similarity_augmentation/tst/clean.Europarl.en-fr.en.tst.tokc.bpe.s2v.augmented
+        - /gpfsdswork/projects/rech/sfz/utt84zy/neural_similarity_augmentation/tst/clean.GNOME.en-fr.en.tst.tokc.bpe.s2v.augmented
+        - /gpfsdswork/projects/rech/sfz/utt84zy/neural_similarity_augmentation/tst/clean.JRC-Acquis.en-fr.en.tst.tokc.bpe.s2v.augmented
+        - /gpfsdswork/projects/rech/sfz/utt84zy/neural_similarity_augmentation/tst/clean.KDE4.en-fr.en.tst.tokc.bpe.s2v.augmented
+        - /gpfsdswork/projects/rech/sfz/utt84zy/neural_similarity_augmentation/tst/clean.news-commentary-v14.en.tst.tokc.bpe.s2v.augmented
+        - /gpfsdswork/projects/rech/sfz/utt84zy/neural_similarity_augmentation/tst/clean.TED2013.en-fr.en.tst.tokc.bpe.s2v.augmented
+        - /gpfsdswork/projects/rech/sfz/utt84zy/neural_similarity_augmentation/tst/clean.Wikipedia.en-fr.en.tst.tokc.bpe.s2v.augmented
+tgt:
+        - /gpfsdswork/projects/rech/sfz/utt84zy/neural_similarity_augmentation/tst/clean.ECB.en-fr.fr.tst.tokc.bpe.s2v.augmented
+        - /gpfsdswork/projects/rech/sfz/utt84zy/neural_similarity_augmentation/tst/clean.EMEA.en-fr.fr.tst.tokc.bpe.s2v.augmented
+        - /gpfsdswork/projects/rech/sfz/utt84zy/neural_similarity_augmentation/tst/clean.Europarl.en-fr.fr.tst.tokc.bpe.s2v.augmented
+        - /gpfsdswork/projects/rech/sfz/utt84zy/neural_similarity_augmentation/tst/clean.GNOME.en-fr.fr.tst.tokc.bpe.s2v.augmented
+        - /gpfsdswork/projects/rech/sfz/utt84zy/neural_similarity_augmentation/tst/clean.JRC-Acquis.en-fr.fr.tst.tokc.bpe.s2v.augmented
+        - /gpfsdswork/projects/rech/sfz/utt84zy/neural_similarity_augmentation/tst/clean.KDE4.en-fr.fr.tst.tokc.bpe.s2v.augmented
+        - /gpfsdswork/projects/rech/sfz/utt84zy/neural_similarity_augmentation/tst/clean.news-commentary-v14.fr.tst.tokc.bpe.s2v.augmented
+        - /gpfsdswork/projects/rech/sfz/utt84zy/neural_similarity_augmentation/tst/clean.TED2013.en-fr.fr.tst.tokc.bpe.s2v.augmented
+        - /gpfsdswork/projects/rech/sfz/utt84zy/neural_similarity_augmentation/tst/clean.Wikipedia.en-fr.fr.tst.tokc.bpe.s2v.augmented
