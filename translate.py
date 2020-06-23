@@ -31,7 +31,7 @@ if __name__ == "__main__":
             else:
                 prefix.append(None)
 
-        print(prefix)
+        #print(prefix)
         import time
         start = time.time()
         translator = ctranslate2.Translator(
@@ -46,7 +46,7 @@ if __name__ == "__main__":
                 beam_size=5,
                 length_penalty=0.2,
                 min_decoding_length=0,
-                return_scores=False)
+                return_scores=True)
         end = time.time()
         duration = end - start
         import os
@@ -57,6 +57,7 @@ if __name__ == "__main__":
         with open(hyp_file, "w") as f:
             for batch in output:
                 for line in batch:
+                    #print(line)
                     hyp = " ".join(line["tokens"])
                     # f.write(" ".join(line["tokens"]) + "\n")
                     f.write(hyp.split(" %s " % args.joiner)[-1] + "\n")
